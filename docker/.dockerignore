@@ -1,5 +1,6 @@
 .env
 Dockerfile
+docker-compose.yml
 /characters
 /loras
 /models
@@ -7,3 +8,4 @@ Dockerfile
 /prompts
 /softprompts
 /training
+/docker

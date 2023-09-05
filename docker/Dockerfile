@@ -70,3 +70,4 @@ RUN cp /app/venv/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda1
 COPY . /app/
 ENV CLI_ARGS=""
 CMD . /app/venv/bin/activate && python3 server.py ${CLI_ARGS}
+#CMD . /app/venv/bin/activate && bash
