@@ -17,7 +17,7 @@ default_req_params = {
     'echo': False,
     'seed': -1,
     # 'n' : default(body, 'n', 1),  # 'n' doesn't have a direct map
-    'truncation_length': 2048,  # first use shared.settings value
+    'truncation_length': 4096,  # first use shared.settings value
     'add_bos_token': True,
     'do_sample': True,
     'typical_p': 1.0,
