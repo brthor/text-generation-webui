@@ -67,6 +67,9 @@ RUN . /app/venv/bin/activate && \
 
 RUN cp /app/venv/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda118.so /app/venv/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so
 
+RUN . /app/venv/bin/activate && pip install --force-reinstall transformers>=4.34.0
+
+
 COPY . /app/
 ENV CLI_ARGS=""
 CMD . /app/venv/bin/activate && python3 server.py ${CLI_ARGS}
