@@ -72,6 +72,8 @@ RUN --mount=type=cache,target=/root/.cache/pip,rw \
     done
 
 ENV CLI_ARGS=""
+RUN . /app/venv/bin/activate && pip install --force-reinstall transformers>=4.34.0
+
 
 EXPOSE ${CONTAINER_PORT:-7860} ${CONTAINER_API_PORT:-5000} ${CONTAINER_API_STREAM_PORT:-5005}
 CMD . /app/venv/bin/activate && python3 server.py ${CLI_ARGS}
